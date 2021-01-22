@@ -17,7 +17,7 @@ public class SearchSteps {
         System.out.println("Step 1: I am on Search page");
     }
 
-    @When("I search for a product with name {string} and price {int}")
+    @When("^I search for a product with name \"([^\"]+)\" and price (\\d+)$")
     public void iSearchForAProductWithNameAndPrice(String productName, int price){
         System.out.println("Step 2: Search the product with name: " + productName + " price : " + price);
 
