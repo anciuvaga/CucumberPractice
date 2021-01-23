@@ -33,3 +33,13 @@ Short hand characters:
 (\d+)
 
 ([a-zA-F])
+
+2. Tags
+   Usage
+  1. tags = "@Smoke and @Regression or @Prod"
+  2. tags = "@Smoke or @Regression or @Prod"
+  3. tags = "not @Prod"
+
+execute from maven : maven test
+to filter out using maven: mvn test -Dcucumber.filter.tags="@Smoke or @Regression"
+   
