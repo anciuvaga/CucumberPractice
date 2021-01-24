@@ -42,4 +42,3 @@ Short hand characters:
 
 execute from maven : maven test
 to filter out using maven: mvn test -Dcucumber.filter.tags="@Smoke or @Regression"
-   
