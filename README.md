@@ -42,3 +42,25 @@ Short hand characters:
 
 execute from maven : maven test
 to filter out using maven: mvn test -Dcucumber.filter.tags="@Smoke or @Regression"
+
+3. Hooks
+
+setup and teardown
+will be executed before each senario - @Before
+will be executed after each scenario - @After
+
+@Before
+m1(order=1)
+Before
+m2(order=2)
+
+@After(order=1)  
+m1()
+@After(order=2)
+m2()
+
+@BeforeStep --before each step of the scenario
+@AfterStep -- after each step of the scenario
+
+Annotate tags with hooks:
+@Before("@Smoke")
