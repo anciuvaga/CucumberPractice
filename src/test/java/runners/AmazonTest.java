@@ -6,10 +6,15 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features ={"src/test/resources/appFeatures/Search.feature"},
+        features = {"src/test/resources/appFeatures/Search.feature"},
         glue = {"stepDefinitions", "hooks"},
-        tags = "@Smoke or @Regression",
-        plugin = {"pretty"}
+        tags = "@All",
+        plugin = {"pretty", "json:target/MyReports/report.json",
+                "junit:target/MyReports/report.xml"},
+        //  publish = true
+        monochrome = false,
+        dryRun = true
+
 )
 
 public class AmazonTest {

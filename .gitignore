@@ -3,7 +3,6 @@
 *iml
 **/target/
 *jms.log.*
-test-output/
 *json
 *xml
 !pom.xml
